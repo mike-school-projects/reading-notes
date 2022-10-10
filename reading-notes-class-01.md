@@ -18,4 +18,4 @@ More of the same stuff as the basic syntax webpage.
 
 ## GitHub Pages video
 Talks about a automatic page generator that doesn't exist anymore.
-
+Instead, ignore the video and just add a new markdown file from the repository home page.
