@@ -7,7 +7,7 @@ Growth mindset is something I strongly belive in.  You don't need to be super sm
 2. Earn it
 3. Anything is possible
 
-A quote that I just googled:
+A quote that I just googled but sounds nice:
 > “Continuous effort– not strength or intelligence – is the key to unlocking our potential.    --Winston Churchill
 
 [Link to my portfolio](https://github.com/mikeshen7)
