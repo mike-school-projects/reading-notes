@@ -25,7 +25,7 @@ There are text editors that come pre-installed on your computer, but these have 
 
 Integrated Development Environments (IDE) take it one step further by adding file manager, compiler, and debugger in one package.
 
-## The Command Line
+## Linux Tutorial
 This recaps the commands discussed in the lecture notes.
 Linux is extension-less: the .xxx that you see in Windows does not matter to Linux
 To handle special characters, either use quotes or escape character, which is a backslash (\)
