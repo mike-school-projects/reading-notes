@@ -10,4 +10,8 @@ Repository
 - If folder is monitored by git, it will show in terminal
 - one project = one repository
 - Repositories can live on GitHub and/or on your computer
-- 
+
+GitHub terminal commands
+- git clone [website of git repository]
+- git status      
+- git remote -v
