@@ -15,3 +15,5 @@ GitHub terminal commands
 - git clone [website of git repository]
 - git status      
 - git remote -v
+
+test
