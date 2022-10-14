@@ -1,32 +1,22 @@
-# My Reading Journal for 102
+# My Reading Journal for my Code Fellows Journey
 
-Hello world!  I am ***Mike Shen***.  I am currently a freelance consultant[^1].  In a previous life, I spent 6 years in the Navy as a Reactor Operator, and the last 18 years doing building automation systems.
+Hello world!  I am ***Mike Shen***.  I am looking to learn how to code.  In a previous life, I spent 6 years in the Navy as a Reactor Operator, and the last 18 years doing building automation systems.
 
 This website is to organize my class reading notes.
 
 ## Code 102 Table of Contents
 
-[Code 102 Class 01 notes](https://mikeshen7.github.io/reading-notes/102/class-01)
-
-[Code 102 Class 02 notes](https://mikeshen7.github.io/reading-notes/102/class-02)
-
-[Code 102 Class 03 notes](https://mikeshen7.github.io/reading-notes/102/class-03)
-
-[Code 102 Class 04 notes](https://mikeshen7.github.io/reading-notes/102/class-04)
-
-[Code 102 Class 05 notes](https://mikeshen7.github.io/reading-notes/102/class-05)
-
-[Code 102 Class 06 notes](https://mikeshen7.github.io/reading-notes/102/class-06)
-
-[Code 102 Class 07 notes](https://mikeshen7.github.io/reading-notes/102/class-07)
-
-[Code 102 Class 08 notes](https://mikeshen7.github.io/reading-notes/102/class-08)
-
-[Code 102 Class 09 notes](https://mikeshen7.github.io/reading-notes/102/class-09)
-
-[Code 102 Class 10 notes](https://mikeshen7.github.io/reading-notes/102/class-10)
-
-[Link to my portfolio](https://github.com/mikeshen7)
+- [Code 102 Class 01 notes](https://mikeshen7.github.io/reading-notes/102/class-01)
+- [Code 102 Class 02 notes](https://mikeshen7.github.io/reading-notes/102/class-02)
+- [Code 102 Class 03 notes](https://mikeshen7.github.io/reading-notes/102/class-03)
+- [Code 102 Class 04 notes](https://mikeshen7.github.io/reading-notes/102/class-04)
+- [Code 102 Class 05 notes](https://mikeshen7.github.io/reading-notes/102/class-05)
+- [Code 102 Class 06 notes](https://mikeshen7.github.io/reading-notes/102/class-06)
+- [Code 102 Class 07 notes](https://mikeshen7.github.io/reading-notes/102/class-07)
+- [Code 102 Class 08 notes](https://mikeshen7.github.io/reading-notes/102/class-08)
+- [Code 102 Class 09 notes](https://mikeshen7.github.io/reading-notes/102/class-09)
+- [Code 102 Class 10 notes](https://mikeshen7.github.io/reading-notes/102/class-10)
+- [Link to my portfolio](https://github.com/mikeshen7)
 
 ## Code 201 Table of Contents
 
@@ -61,5 +51,3 @@ This website is to organize my class reading notes.
 [Code 201 Class 15 notes](https://mikeshen7.github.io/reading-notes/201/class-15)
 
 [Link to my portfolio](https://github.com/mikeshen7)
-
-[^1]: Consulant for stuff I want to consult on.  Not necessarily what you want to be consulted on.
