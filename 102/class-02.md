@@ -1,21 +1,24 @@
 # Class 02 Notes
 
 ## Lecture notes
-Command Line Interface
-  - pwd        print working directory
-  - ls         list
-  - ls -a      list all
-  - clear      clear
-  - mkdir      make director
-  - cd         change directory
-  - touch      make file
-  - cd ..      change directory back 1 level
-  - cd ...     change directory back 2 levels
 
+Command Line Interface
+
+- pwd        print working directory
+- ls         list
+- ls -a      list all
+- clear      clear
+- mkdir      make director
+- cd         change directory
+- touch      make file
+- cd ..      change directory back 1 level
+- cd ...     change directory back 2 levels
 
 ## Choosing a Text Editor
+
 Text editors can make coding easier.  There are many out there, all with their own pros and cons.
 Some things to look for in a text editor:
+
 - Code completion
 - Syntax highlighting
 - Themes
@@ -26,9 +29,11 @@ There are text editors that come pre-installed on your computer, but these have 
 Integrated Development Environments (IDE) take it one step further by adding file manager, compiler, and debugger in one package.
 
 ## Linux Tutorial
+
 This recaps the commands discussed in the lecture notes.
 Linux is extension-less: the .xxx that you see in Windows does not matter to Linux
 To handle special characters, either use quotes or escape character, which is a backslash (\)
 Files that begin with a period are automatically hidden files.
 ls -a shows all files, including hidden files.
 
+[Link to home](https://mikeshen7.github.io/reading-notes)
