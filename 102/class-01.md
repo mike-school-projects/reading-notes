@@ -2,7 +2,7 @@
 
 ## Lecture notes
 
-Growth mindset is something I strongly belive in.  You don't need to be super smart.  You just need to apply yourself, learn, grow, and you can accomplish just about anything.  I am reminded to:
+Growth mindset is something I strongly believe in.  You don't need to be super smart.  You just need to apply yourself, learn, grow, and you can accomplish just about anything.  I am reminded to:
 
 1. Always be learning
 2. Earn it
