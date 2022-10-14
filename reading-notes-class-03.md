@@ -12,8 +12,18 @@ Repository
 - Repositories can live on GitHub and/or on your computer
 
 GitHub terminal commands
-- git clone [website of git repository]
-- git status      
-- git remote -v
+- `git clone [website of git repository]`
+- `git status`      
+- `git remote -v`
 
-test
+Once cloned, can make changes is VS Code
+
+ACP
+
+1. **Add** all files so git tracks it
+- add files that are in red
+- `git add .`
+2. **Committ** files
+- `git commit -m "commit message"`
+3.  **Push** changes to GitHub
+- `git push origin main`
