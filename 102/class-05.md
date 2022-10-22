@@ -64,6 +64,7 @@ h1 {
 [CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
 ## Lab notes
+
 color.adobe.com/create/color-wheel
 css-tricks.com/almanac
 
