@@ -24,8 +24,4 @@ Operators: lots of different types
 - Type (typeof, instanceof)
 - Bitwise operators (&, |, ~, ^, <<, >>, >>>)
 
-## Lab Notes
-
-d
-
 [Link to home](https://mikeshen7.github.io/reading-notes)
