@@ -8,8 +8,8 @@ HTML Text Fundamentals. HTML Advanced Text Formatting.
 
 1. Why is it important to use semantic elements in our HTML?  It helps to make your webpage readable to both web browsers and to devs
 2. How many levels of headings are there in HTML?  6
-3. What are some uses for the <sup> and <sub> elements?  Superscript and subscript
-4. When using the <abbr> element, what attribute must be added to provide the full expansion of the term?  Title attribute
+3. What are some uses for the `<sup> and <sub>` elements?  Superscript and subscript
+4. When using the `<abbr>` element, what attribute must be added to provide the full expansion of the term?  Title attribute
 
 Learn CSS.  How CSS Is Structured.
 
@@ -26,13 +26,13 @@ Learn JS
 2. List 4 types of JavaScript operators.
 Addition +
 Subtraction -
-Assignment = 
+Assignment =
 Not !
 3. Describe a real world Problem you could solve with a Function.  Generic data entry for basic user info.
 
 Making Decisions In Your Code – Conditionals.
 
-1. An if statement checks a *condition* and if it evaluates to *true*, then the code block will execute. 
+1. An if statement checks a *condition* and if it evaluates to *true*, then the code block will execute.
 2. What is the use of an else if? To do a secondary conditional only if the first is not true
 3. List 3 different types of comparison operators.
 greater than >
