@@ -36,3 +36,9 @@ This website is to organize my class reading notes.
 - [Code 201 Class 13 notes](https://mikeshen7.github.io/reading-notes/201/class-13)
 - [Code 201 Class 14 notes](https://mikeshen7.github.io/reading-notes/201/class-14)
 - [Code 201 Class 15 notes](https://mikeshen7.github.io/reading-notes/201/class-15)
+
+## Cheatsheets
+
+- [Markdown](https://mikeshen7.github.io/reading-notes/cheatsheet-markdown)
+- [HTML](https://mikeshen7.github.io/reading-notes/cheatsheet-html)
+- [JavaScript](https://mikeshen7.github.io/reading-notes/cheatsheet-javascript)
