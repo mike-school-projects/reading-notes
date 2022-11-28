@@ -1,11 +1,13 @@
 # Markdown Cheatsheet
 
-File format: *.md
+## File format: *.md
 
 Uses: simple way to add style and formatting to plain text documents using special symbols to create simple webpages quickly.
 Special attention should be given to spaces: sometimes it likes it, sometimes it doesn't.
 
-Syntax:
+## Tools: use VS Code
+
+## Syntax:
 
 ## Heading Level 2
 
@@ -29,10 +31,11 @@ Bold and italics ***text here***
 ` code blocks `
 
 Images
-![Alt text](/assets/images/tux.png "image title")
+![Alt text](/assets/images/Darth Vader.jpg "image title")
 
 URL links
 [Markdown Guide](https://markdownguide.org/basic-syntax)
 
-Resources:
+## Resources:
+
 [Markdown Guide](https://markdownguide.org/basic-syntax)
