@@ -33,7 +33,7 @@ Bold and italics ***text here***
 ` code blocks `
 
 Images
-![Alt text](/assets/images/Darth%20Vader.jpg "image title")
+![Alt text](./assets/images/Darth_Vader.jpg "image title")
 
 URL links
 [Markdown Guide](https://markdownguide.org/basic-syntax)
