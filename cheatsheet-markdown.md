@@ -7,7 +7,7 @@ Special attention should be given to spaces: sometimes it likes it, sometimes it
 
 ## Tools: use VS Code
 
-## Syntax:
+## Syntax
 
 ## Heading Level 2
 
@@ -16,7 +16,9 @@ Special attention should be given to spaces: sometimes it likes it, sometimes it
 Use plain text for paragraphs
 
 Bold text   **text here**
+
 Italic text *text here*
+
 Bold and italics ***text here***
 
 > Blockquote
@@ -31,11 +33,11 @@ Bold and italics ***text here***
 ` code blocks `
 
 Images
-![Alt text](/assets/images/Darth Vader.jpg "image title")
+![Alt text](/assets/images/Darth%20Vader.jpg "image title")
 
 URL links
 [Markdown Guide](https://markdownguide.org/basic-syntax)
 
-## Resources:
+## Resources
 
 [Markdown Guide](https://markdownguide.org/basic-syntax)
