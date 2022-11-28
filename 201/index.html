@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Lab 01</title>
+
+    <style>
+      body {
+        background-color: white;
+      }
+      h1 {
+        background-color:pink;
+        color:blue;
+        width: max-content;
+        margin:auto;
+      }
+      p {
+        border-color:gray;
+        border-width:5px;
+        border-style:ridge;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Class 1 Lab</h1>
+    </header>
+
+    <main>
+      <p style="background-color: #A5ACAF; color: #024; text-align: left; margin-bottom:50px;"> Q1: What is your name? </p>
+      <p style="background-color: #4B2E83; color: #B7A57A; text-align: center; margin-left:50px;"> Q2: Where are you from? </p>
+      <p style="background-color: #001628; color: #99D9D9; text-align: right; margin-right:50px;"> Q3: What is your quest? </p>
+      <p style="background-color: #002878; color: #FFCC00; width: max-content; margin:auto;"> Q4: What is the airspeed velocity of an unladen swallow? </p>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      let name = prompt("What is your name?");
+      console.log("Q1: What is your name? User response was: " + name)
+      alert("Welcome " + name + "!")
+
+      let hometown = prompt("Where are you from?")
+      console.log("Q2: Where are you from? User response was: " + hometown)
+      alert(name + " of " + hometown + " - welcome!")
+
+      let quest = prompt("What is your quest?")
+      console.log("Q3: What is your quest? User response was: " + quest)
+      alert(name + " of " + hometown + " - good luck on your quest to " + quest)
+
+      let airspeed = prompt("What is the airspeed velocity of an unladen swallow?")
+      console.log("Q4: What is the airspeed velocity of an unladen swallow? User response was: " + airspeed)
+      alert(name + " of " + hometown + ", knowing that the airspeed velocity of an unladen swallow is " + airspeed + " will greatly help you in your quest to " + quest)
+
+    </script>  
+  </body>
+</html>

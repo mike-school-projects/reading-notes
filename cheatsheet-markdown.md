@@ -32,6 +32,10 @@ Bold and italics ***text here***
 
 ` code blocks `
 
+``` code language
+big code block
+```
+
 Images
 ![Alt text](./assets/images/Darth_Vader.jpg "image title")
 
