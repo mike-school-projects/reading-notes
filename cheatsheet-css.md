@@ -15,26 +15,28 @@ name-of-html-element {              Selector
     padding: 5px;
 }
 
-id for individual element
-class for multiple elments
+CSS Rule: comprises the entire thing
+
+### CSS Selector
+
+Element: `element-name`
+ID:`#id-name` for individual element
+Class: `.class-name` for multiple elments assigned a class
+Universal: `*`
+Descendant: `A B` selects all B inside of A
+Element / Class AND combination: `element-name.class-name`
+OR combination: `A,B`
+Adjacent sibling: `A+B` selects all B that directly follows A
+General sibling: `A ~ B`
 
 ### External CSS
 
 From inside the html file, in head, add reference to external file:
 
 ```html
-    <!DOCTYPE html>                                                 - start with this to identify it has HTML document
-    <html lang="en-US">                                             - <html> wraps the entire content.  AKA root element
     <head>                                                          - header info that isn't shown
-        <meta charset="utf-8" />                                    - sets character set
-        <meta name="viewport" content="width=device-width" />       - sets render width
-        <title>My test page</title>                                 - sets title of page (what appears in browser)
         <link rel="stylesheet" href="mystyle.css">                  - External CSS reference
     </head>
-    <body>                                                          - Content
-        <img src="images/firefox-icon.png" alt="My test image" />
-    </body>
-    </html>
 ```
 
 ### Internal CSS
@@ -44,39 +46,32 @@ From inside the html file, in head, add reference to external file:
 - Example:
 
 ```html
-<!DOCTYPE html>
-<html>
 <head>
-<style>
-body {
-  background-color: linen;
-}
-
-h1 {
-  color: maroon;
-  margin-left: 40px;
-}
-</style>
+  <style>
+    body {
+      background-color: linen;
+    }
+    h1 {
+      color: maroon;
+      margin-left: 40px;
+    }
+  </style>
 </head>
-<body>
 ```
 
 ### Inline CSS
 
 - Use to apply unique style to a single element
 - Use style element in the HTML element itself
+- Highest order precedence compared to external / inline.
 - Example:
 
 ```html
-<!DOCTYPE html>
-<html>
 <body>
-
 <h1 style="color:blue;text-align:center;">This is a heading</h1>
 <p style="color:red;">This is a paragraph.</p>
-
 </body>
-</html>
+
 ```
 
 ## Resources

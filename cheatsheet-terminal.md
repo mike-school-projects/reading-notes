@@ -3,10 +3,6 @@
 lecture 1, 11:07
 11:22 extensions
 
-git status
-git add .
-git push origin main
-
 pwd                     print working directory
 ls                      list
 cd                      change directory

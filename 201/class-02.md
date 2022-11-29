@@ -40,6 +40,13 @@ less than <
 strict equals ===
 4. What is the difference between the logical operator && and ||?  AND - both must be true. OR - either must be true
 
+## Lecture notes
+
+10:35 repl, logical operators
+11:17 git flow
+11:29 lab
+11:54 lab html
+
 ## Things I want to know more about
 
 [Link to home](https://mikeshen7.github.io/reading-notes)
