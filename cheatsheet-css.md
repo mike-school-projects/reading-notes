@@ -78,3 +78,4 @@ From inside the html file, in head, add reference to external file:
 
 [CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 [CSS Tricks](https://css-tricks.com/almanac)
+[CSS cheatsheet](https://overapi.com/css)
