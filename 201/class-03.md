@@ -35,6 +35,14 @@ Arrays. Operators and Expressions. Conditionals. Loops.
 5. Describe a real world example of when a conditional statement should be used in a JavaScript program.  Location can change how a website is displayed
 6. Give an example of when a Loop is useful in JavaScript. Can be used for lots of things like, like to log a user into a site with proper credentials.
 
+## Lecture times
+9:00 start
+9:08 code review
+9:30 increment score++
+10:14 arrays
+11:10 for loops
+11:30 while loops
+
 ## Things I want to know more about
 
 [Link to home](https://mikeshen7.github.io/reading-notes)
