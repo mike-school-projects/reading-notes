@@ -31,6 +31,21 @@ Miscellaneous
 
 1. Pick 2 benefits to pair programming and reflect on how these benefits could help you on your coding journey.  Engaged collaboration and learning from others is a big ones for me.  This helps to widen my perspective on how things can/should be done so I can be a better programmer.
 
+## Lecture Times
+
+9:09 code review
+9:13 Q6
+9:35 convert string to number
+9:53 nested loop
+10:07 break
+10:17 CSS box model
+10:32 padding shorthand
+10:39 positioning
+10:58 break
+11:08 function anatomy
+11:39 function return array
+11:54 github fork
+
 ## Things I want to know more about
 
 [Link to home](https://mikeshen7.github.io/reading-notes)
