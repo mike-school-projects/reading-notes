@@ -121,6 +121,61 @@ prompt(`My name is ${variableName})
 Compare to string interpolation:
 prompt('My name is ' + varaibleName)
 
+## Objects
+
+const person = {
+  name: ["Bob", "Smith"],
+  bio() {
+    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+  },
+};
+
+person.name would return ["Bob", "Smith"]
+person.bio() would call the bio function within person.
+
+### Object within object
+
+const person = {
+  name: {
+    first: "Bob",
+    last: "Smith",
+  },
+  // …
+};
+
+person.name.first would return "Bob"
+
+### Alternate way to access
+
+person["age"]; is the same as person.age
+Use this when accessing info via varaible (like function call)
+
+### Can create new properties
+
+person.["eyes"] = "hazel;
+
+### Can use variable to refer to itself using keyword of: this
+
+const person1 = {
+  name: "Chris",
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}.`);
+  },
+};
+
+### Constructors: function that creates new objects
+
+function Person(name) {                     // creates function called "Salva"
+  this.name = name;                         // Salva.name = Salve
+  this.introduceSelf = function () {
+    console.log(`Hi! I'm ${this.name}.`);   // Hi! I'm ${Salva.name}.   or Hi! I'm Salva.
+  };
+}
+
+const salva = new Person("Salva");   // calls function `Person` as a constructor using keyword of new
+salva.name;                          // uses Salva as variable.  replaces `this` with `Salva` in the function
+salva.introduceSelf();
+
 ## Resources
 
 [Replit - live demo](https://replit.com)  Use Node.js template

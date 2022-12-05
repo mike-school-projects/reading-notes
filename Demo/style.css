@@ -1,0 +1,18 @@
+* {
+  background-color:darkgray;
+}
+
+
+figure {
+  border-color:red;
+  border-width:2px;
+  border-style:solid;
+  padding:20px;
+  width:max-content;
+  margin:auto;
+}
+
+p {
+  font-family: 'Ms Madi', cursive;
+  font-size:3vw;
+}
