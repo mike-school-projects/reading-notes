@@ -55,6 +55,24 @@ Uses: web pages
 
 `<p>&copy; text</p>` adds copyright text
 
+## Document Object Model
+
+Converts webpage to object that can be read / manipulated by JS.
+Steps for DOM manipulation
+
+1. Get window into your HTML or into the DOM
+    a. let section = document.getElementByID('my-section');
+    b. let body = document.querySelector('body');
+2. Create elements
+    a. const h2Elmeent = document.createElement('h2');
+    b. `<h2></h2>`
+3. Give context if necessary
+    a. h2Element.textContent = 'Hey! I\'m an h2!'
+    b. `<h2>Hey I'm an h2!</h2>`
+4. Add it to the DOM
+    a. parentElement.appendChild(child)
+    b. section.appendChild(h2Element);
+
 ## Resources
 
 [Miro - live demo](https://miro.com)

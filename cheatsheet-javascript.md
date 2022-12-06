@@ -145,28 +145,46 @@ const person = {
 
 person.name.first would return "Bob"
 
-### Alternate way to access
+### Functions inside of objects
+
+``` JS
+const person = {
+  first: "Bob",
+  last: "Smith",
+  myFunction: function(){     // use keyword fuction() to indicate it's a function.
+      console.log('Hi');
+    },
+  }
+  ```
+
+To call:
+person.myFunction();  // use parenthesis to call the function.
+
+### Bracket notation
 
 person["age"]; is the same as person.age
 Use this when accessing info via varaible (like function call)
 
 ### Can create new properties
 
-person.["eyes"] = "hazel;
+person.eyes = 'hazel';      // If eyes didn't exist before, you can create it just by referencing it.
+person.["eyes"] = 'hazel';  // Alternate method with bracket notation
 
 ### Can use variable to refer to itself using keyword of: this
+
+In an object - refers to the object you are in
 
 const person1 = {
   name: "Chris",
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`Hi! I'm ${this.name}.`);   // this.name = person1.name
   },
 };
 
 ### Constructors: function that creates new objects
 
 function Person(name) {                     // creates function called "Salva"
-  this.name = name;                         // Salva.name = Salve
+  this.name = name;                         // Salva.name = Salva
   this.introduceSelf = function () {
     console.log(`Hi! I'm ${this.name}.`);   // Hi! I'm ${Salva.name}.   or Hi! I'm Salva.
   };
@@ -174,7 +192,7 @@ function Person(name) {                     // creates function called "Salva"
 
 const salva = new Person("Salva");   // calls function `Person` as a constructor using keyword of new
 salva.name;                          // uses Salva as variable.  replaces `this` with `Salva` in the function
-salva.introduceSelf();
+salva.introduceSelf();               // executes introducesSelf method on salva
 
 ## Resources
 
