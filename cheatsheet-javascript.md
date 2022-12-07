@@ -194,6 +194,19 @@ const salva = new Person("Salva");   // calls function `Person` as a constructor
 salva.name;                          // uses Salva as variable.  replaces `this` with `Salva` in the function
 salva.introduceSelf();               // executes introducesSelf method on salva
 
+#### Constructors and Objects differences:
+
+Objects created by constructors are tied to the original constructors.  Can use prototypes.
+Don't use constructors for creating methods inside objects.  Use Prototype instead.  Functions created by simple objects take up more memory.
+
+``` JS
+Person.prototype.greeting = function (){
+  console.log('stuff');
+} 
+```
+
+creates a method of greeting for all Person objects.
+
 ## Resources
 
 [Replit - live demo](https://replit.com)  Use Node.js template
