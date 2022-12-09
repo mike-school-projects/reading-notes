@@ -194,7 +194,7 @@ const salva = new Person("Salva");   // calls function `Person` as a constructor
 salva.name;                          // uses Salva as variable.  replaces `this` with `Salva` in the function
 salva.introduceSelf();               // executes introducesSelf method on salva
 
-#### Constructors and Objects differences:
+#### Constructors and Objects differences
 
 Objects created by constructors are tied to the original constructors.  Can use prototypes.
 Don't use constructors for creating methods inside objects.  Use Prototype instead.  Functions created by simple objects take up more memory.
@@ -206,6 +206,13 @@ Person.prototype.greeting = function (){
 ```
 
 creates a method of greeting for all Person objects.
+
+## APIs
+
+APIs: software with protocols and procedures to send data back and forth between two separate computers (i.e. server / client, webpage / server)
+HTTP verbs: GET, POST, PUT/PATCH, DELETE
+
+fetch() to request
 
 ## Resources
 
