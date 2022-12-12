@@ -1,18 +1,45 @@
 * {
-  background-color:darkgray;
+  background-color: darkgray;
 }
 
-
-figure {
-  border-color:red;
-  border-width:2px;
-  border-style:solid;
-  padding:20px;
-  width:max-content;
-  margin:auto;
+.grid-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  gap:30px;
+  grid-template-areas:
+  "header header header"
+  "sidebar content content"
+  "sidebar content content"
+  "sidebar content content"
+  "sidebar article article"
+  "footer footer footer"
 }
 
-p {
-  font-family: 'Ms Madi', cursive;
-  font-size:3vw;
+.grid-container div {
+  border: 2px solid black;
+  font-size: 1.5em;
+  padding: 30px;
+}
+
+.grid-item1{
+  grid-area:header;
+}
+
+.grid-item2{
+  grid-area:sidebar;
+}
+
+.grid-item3{
+  grid-area:content;
+}
+
+.grid-item4{
+  grid-area:article;
+}
+
+.grid-item5{
+  grid-area:footer;
 }
