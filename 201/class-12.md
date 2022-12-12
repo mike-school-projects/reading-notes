@@ -1,6 +1,6 @@
 # Class 12 notes
 
-This is important because adding shapes is cool.
+This is important because adding visuals make a webpage look much better.
 
 JavaScript Canvas
 
