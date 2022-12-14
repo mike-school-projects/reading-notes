@@ -35,7 +35,7 @@ This website is to organize my class reading notes.
 - [Code 201 Class 12 notes](https://mikeshen7.github.io/reading-notes/201/class-12)
 - [Code 201 Class 13 notes](https://mikeshen7.github.io/reading-notes/201/class-13)
 - [Code 201 Class 14 notes](https://mikeshen7.github.io/reading-notes/201/class-14)
-- [Code 201 Class 15 notes](https://mikeshen7.github.io/reading-notes/201/class-15)
+- [Code 201 Class 14 - Psychological  Safety](https://mikeshen7.github.io/reading-notes/201/class-14a)
 
 ## Cheatsheets
 
