@@ -21,8 +21,8 @@ This website is to organize my class reading notes.
 
 ## Old Class Notes
 
-- [Code 102 - Intro to Software Development Class notes](https://mikeshen7.github.io/reading-notes/102.md)
-- [Code 201 - Foundations of Software Development Class notes](https://mikeshen7.github.io/reading-notes/201.md)
+- [Code 102 - Intro to Software Development Class notes](https://mikeshen7.github.io/reading-notes/102)
+- [Code 201 - Foundations of Software Development Class notes](https://mikeshen7.github.io/reading-notes/201)
 
 ## Cheatsheets
 
