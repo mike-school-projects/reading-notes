@@ -14,7 +14,7 @@ This website is to organize my class reading notes.
 - [Code 301 Class 08 notes](https://mikeshen7.github.io/reading-notes/301/class-09)
 - [Code 301 Class 10 notes](https://mikeshen7.github.io/reading-notes/301/class-10)
 - [Code 301 Class 11 notes](https://mikeshen7.github.io/reading-notes/301/class-11)
-- [Code 301 Class 12 notes](https://mikeshen7.github.io/reading-notes/301/class-12)
+- [Code 301 Class 12 notes](https://mikeshen7.gitgithub.io/reading-notes/301/class-12)
 - [Code 301 Class 13 notes](https://mikeshen7.github.io/reading-notes/301/class-13)
 - [Code 301 Class 14 notes](https://mikeshen7.github.io/reading-notes/301/class-14)
 - [Code 301 Class 15 notes](https://mikeshen7.github.io/reading-notes/301/class-15)
@@ -26,9 +26,6 @@ This website is to organize my class reading notes.
 
 ## Cheatsheets
 
-- [Cheatsheet](https://mikeshen7.github.io/reading-notes/demo/index.html)
-- [HTML](https://mikeshen7.github.io/reading-notes/cheatsheet-html)
-- [CSS](https://mikeshen7.github.io/reading-notes/cheatsheet-css)
-- [JavaScript](https://mikeshen7.github.io/reading-notes/cheatsheet-javascript)
+[Cheatsheets](https://mikeshen7.github.io/cheatsheet/)
 
 - [Link to my portfolio](https://github.com/mikeshen7)
