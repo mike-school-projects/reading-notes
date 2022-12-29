@@ -26,7 +26,7 @@ This website is to organize my class reading notes.
 
 ## Cheatsheets
 
-- [Markdown](https://mikeshen7.github.io/reading-notes/cheatsheet-markdown)
+- [Cheatsheet](https://mikeshen7.github.io/reading-notes/demo/index.html)
 - [HTML](https://mikeshen7.github.io/reading-notes/cheatsheet-html)
 - [CSS](https://mikeshen7.github.io/reading-notes/cheatsheet-css)
 - [JavaScript](https://mikeshen7.github.io/reading-notes/cheatsheet-javascript)

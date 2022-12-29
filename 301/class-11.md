@@ -1,4 +1,4 @@
-# Class 1 Notes
+# Class 11 Notes
 
 This is an important topic because...
 
