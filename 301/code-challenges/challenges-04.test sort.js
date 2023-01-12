@@ -23,8 +23,6 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => arr.map((element) => callback(element));
 
-// console.log(updateAnimal(['Dog', 'Cat'], lower));
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -33,14 +31,8 @@ Write a function called sortNames that takes an array of names and sorts them al
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
-const sortNames = (arr) => arr.sort((a, b) => {
-  if (a > b) {
-    return 1;
-  } else return -1;
+const sortNames = (arr) => arr.sort((a, b) => a > b ? 1 : -1);
 
-});
-
-// console.log(sortNames(['dog', 'cat', 'horse', 'Elks']));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -52,8 +44,6 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => arr.sort((a, b) => a - b);
 
-// console.log(sortNumbers([2, 6, 4, 1, 8, 5]));
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -63,8 +53,6 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => arr.sort((a, b) => b - a);
-
-// console.log(sortBackwards([2, 6, 4, 1, 8, 5]));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -76,14 +64,8 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => arr.sort((a, b) => {
-  if (a > b) {
-    return 1;
-  } else return -1;
+const alphabetize = (arr) => arr.sort((a, b) => a > b ? 1 : -1);
 
-});
-
-// console.log(alphabetize(['Alphabet', 'Zebra', 'alphabet', 'carrot']));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -98,20 +80,8 @@ Here is an example of the input:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const sortByPrice = (arr) => arr.sort((a, b) => {
-  if (a.price > b.price) {
-    return 1;
-  } else return -1;
+const sortByPrice = (arr) => arr.sort((a, b) => a.price > b.price ? 1 : -1);
 
-});
-
-// let temp = [
-//   {name: 'Sweatshirt', price: 45},
-//   {name: 'Bookmark', price: 2.50},
-//   {name: 'Tote bag', price: 15}
-// ];
-
-// console.log(sortByPrice(temp));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -121,14 +91,8 @@ Write a function named alphabetizeBetter that takes in an array of strings and r
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetizeBetter = (arr) => arr.sort((a, b) => {
-  if (a.toLowerCase() > b.toLowerCase()) {
-    return 1;
-  } else return -1;
+const alphabetizeBetter = (arr) => arr.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
 
-});
-
-// console.log(alphabetizeBetter(['Alphabet', 'Zebra', 'alphabet', 'carrot']));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -136,13 +100,7 @@ CHALLENGE 8 - Stretch Goal
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortByLength = (arr) => arr.sort((a, b) => {
-  if (a.length > b.length) {
-    return 1;
-  } else return -1;
-});
-
-// console.log(sortByLength(['Alphabets', 'Zebra', 'alphabet', 'carrot']));
+const sortByLength = (arr) => arr.sort((a, b) => a.length > b.length ? 1 : -1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -152,13 +110,7 @@ Write a function named sortNumbersByLength that takes in an array of numbers and
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbersByLength = (arr) => arr.sort((a, b) => {
-  if (a.toString().length > b.toString().length) {
-    return 1;
-  } else return -1;
-});
-
-// console.log(sortNumbersByLength([1, 14, 0.2, -281, 54782]));
+const sortNumbersByLength = (arr) => arr.sort((a, b) => a.toString().length > b.toString().length ? 1 : -1);
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -175,20 +127,11 @@ function Person(firstName, lastName, age) {
 const people = [
   new Person('Wes', 'Washington', 25),
   new Person('Casey', 'Codefellow', 38),
-  new Person('Bill', 'Washington', 38),
   new Person('Stan', 'Seattle', 67),
-  new Person('Bill', 'Washington', 25),
-
 ];
 
-const sortPeople = (arr) => arr.sort((a, b) => {
-  if (a.lastName > b.lastName) {
-    return 1;
-  } else return -1;
-});
+const sortPeople = (arr) => arr.sort((a, b) => a.lastName > b.lastName ? 1 : -1 );
 
-// console.log(sortPeople(people));
-// **** Test sequence is wrong.  It doesn't include either bill ****
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -214,8 +157,6 @@ const sortPeopleBetter = (arr) => arr.sort((a, b) => {
   } else return -1;
 });
 
-// console.log(sortPeopleBetter(people));
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 12 - Stretch Goal
 
@@ -237,7 +178,6 @@ const meetings = [
   new Meeting('Monday', '0900', '0945'),
   new Meeting('Friday', '1200', '1345'),
 ];
-
 
 const sortMeetingsByDay = (arr) => {
   // Add property dayOfWeek corresponding to the numberic value of the day of week
@@ -270,8 +210,6 @@ const sortMeetingsByDay = (arr) => {
   arr.forEach((element) => delete element.dayOfWeekNum);
   return arr;
 };
-
-// console.log(sortMeetingsByDay(meetings));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 13 - Stretch Goal
@@ -322,8 +260,6 @@ const sortSchedule = (arr) => {
   arr.forEach((element) => delete element.dayOfWeekNum);
   return arr;
 };
-
-// console.log(sortSchedule(meetings));
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
