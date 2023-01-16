@@ -40,7 +40,6 @@ const getNames = (arr) => {
   return tempArray;
 };
 
-// console.log(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }]));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -113,9 +112,8 @@ append(a, b);
 console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
-const append = (arr1, arr2) => {
-  arr2.forEach((element)=> arr1.push(element));
-};
+const append = (arr1, arr2) => arr2.forEach((element)=> arr1.push(element));
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -130,7 +128,7 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{ name: 'lloyd', age: 32, shoeSize: 12 }, { name: 'jamie', age: 21, shoeSize: 8 }])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
