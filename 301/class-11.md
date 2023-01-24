@@ -9,10 +9,15 @@ nosql vs sql
 Fill in the chart below with five differences between SQL and NoSQL databases:
 
 SQL	                    NoSQL
+
 relational              non-relational
+
 table-based             document-based
+
 predefined schema       dynamic schema
+
 vertically scalable     horizontially scalable
+
 SQL                     UnQL
 
 1. What kind of data is a good fit for an SQL database?  Complex databases
