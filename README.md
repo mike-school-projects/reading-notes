@@ -18,6 +18,7 @@ This website is to organize my class reading notes.
 - [Code 301 Class 12 notes](https://mikeshen7.github.io/reading-notes/301/class-12)
 - [Code 301 Class 13 notes](https://mikeshen7.github.io/reading-notes/301/class-13)
 - [Code 301 Class 14 notes](https://mikeshen7.github.io/reading-notes/301/class-14)
+- [Code 301 Class 14a notes](https://mikeshen7.github.io/reading-notes/301/class-14a)
 - [Code 301 Class 15 notes](https://mikeshen7.github.io/reading-notes/301/class-15)
 
 ## Old Class Notes
