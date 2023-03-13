@@ -5,6 +5,7 @@ This website is to organize my class reading notes.
 ## Code 401 - Advanced Software Developments Table of Contents
 
 - [Code 401 Prework SQL notes](https://mikeshen7.github.io/reading-notes/401/class-00-SQL)
+\- [Code 401 Prework Growth Mindset notes](https://mikeshen7.github.io/reading-notes/401/class-00-GrowthMindset)
 - [Code 401 Class 01 notes](https://mikeshen7.github.io/reading-notes/401/class-01)
 - [Code 401 Class 02 notes](https://mikeshen7.github.io/reading-notes/401/class-02)
 - [Code 401 Class 03 notes](https://mikeshen7.github.io/reading-notes/401/class-03)
