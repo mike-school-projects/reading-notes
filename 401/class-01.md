@@ -1,6 +1,23 @@
 # Class Notes
 
-This is an important topic because...
+This is an important topic because the concept of O notation is important for understanding how to make efficient code.
+
+Biginners Guide to Big O:
+
+Big O describes execution time or space required by an algorithm as a function of size.
+O(1) is a constant - same execution time regardless of input size.
+O(N) - linear.  Example: for loop through array
+O(N^2) - proprotional to square.  Example: nested loops
+O(2^N) - exponential.  Example: add items in growing array
+O(log N) - logarithmic.  Example: binary search
+
+Assumes worst-case performance scenario
+
+Names and Values in Python:
+
+Assignment nevers copies data
+Anything on left side of assignment is a REFERENCE
+To avoid problem of aliasing, don't mutate.  Create a new object and assign it.
 
 ## Things I want to know more about
 
