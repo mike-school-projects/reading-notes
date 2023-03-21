@@ -23,6 +23,13 @@ Recursive case: repetitive function
 Be careful of infinite loops / stack overflow
 Compared to iterative loops, recursion uses more space and has more time requirements.  Recursion tends to be cleaner and simpler code.
 
+## Class Notes
+
+python -m venv .venv
+source ./.venv/bin/activate
+pip install pytest
+
+
 ## Things I want to know more about
 
 [Link to home](https://mikeshen7.github.io/reading-notes)

@@ -28,7 +28,7 @@ creates virtual environment.  Try python3.9 instead of python
 `python -m venv .venv`
 
 activates virtual environment
-`source ./.venv/vin/activate`
+`source ./.venv/bin/activate`
 
 create file
 `touch snakescafe.py`
