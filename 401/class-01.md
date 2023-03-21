@@ -1,4 +1,4 @@
-# Class Notes
+# Reading Notes
 
 This is an important topic because the concept of O notation is important for understanding how to make efficient code.
 
@@ -18,6 +18,24 @@ Names and Values in Python:
 Assignment nevers copies data
 Anything on left side of assignment is a REFERENCE
 To avoid problem of aliasing, don't mutate.  Create a new object and assign it.
+
+## Class Notes
+
+11:15 demo start
+11:16 building out virtual environment
+
+creates virtual environment.  Try python3.9 instead of python
+`python -m venv .venv`
+
+activates virtual environment
+`source ./.venv/vin/activate`
+
+create file
+`touch snakescafe.py`
+
+exit virtual environment
+`deactivate`
+
 
 ## Things I want to know more about
 
