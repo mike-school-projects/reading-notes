@@ -2,7 +2,11 @@
 
 This is an important topic because the concept of O notation is important for understanding how to make efficient code.
 
-Biginners Guide to Big O:
+## Pain and Suffering
+
+401 is going to be tough.  Suck it up.
+
+## Beginners Guide to Big O
 
 Big O describes execution time or space required by an algorithm as a function of size.
 O(1) is a constant - same execution time regardless of input size.
@@ -13,7 +17,7 @@ O(log N) - logarithmic.  Example: binary search
 
 Assumes worst-case performance scenario
 
-Names and Values in Python:
+## Names and Values in Python
 
 Assignment nevers copies data
 Anything on left side of assignment is a REFERENCE
@@ -24,7 +28,7 @@ To avoid problem of aliasing, don't mutate.  Create a new object and assign it.
 11:15 demo start
 11:16 building out virtual environment
 
-creates virtual environment.  Try python3.9 instead of python
+creates virtual environment.
 `python -m venv .venv`
 
 activates virtual environment
@@ -35,7 +39,6 @@ create file
 
 exit virtual environment
 `deactivate`
-
 
 ## Things I want to know more about
 
