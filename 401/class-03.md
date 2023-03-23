@@ -42,7 +42,11 @@ except: block executes on exception
 
 else: block executes if no exception
 
-finallY: block always executes, regardless of exceptions
+finally: block always executes, regardless of exceptions
+
+## Class notes
+
+
 
 ## Things I want to know more about
 
