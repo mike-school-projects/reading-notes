@@ -6,6 +6,10 @@ This is an important topic because the concept of O notation is important for un
 
 401 is going to be tough.  Suck it up.
 
+Need to keep up with all the readings and not fall behind.
+
+Need to seek out TA help if I get stuck.
+
 ## Beginners Guide to Big O
 
 Big O describes execution time or space required by an algorithm as a function of size.
