@@ -10,6 +10,8 @@ Need to keep up with all the readings and not fall behind.
 
 Need to seek out TA help if I get stuck.
 
+Need to keep end goal in mind.
+
 ## Beginners Guide to Big O
 
 Big O describes execution time or space required by an algorithm as a function of size.
