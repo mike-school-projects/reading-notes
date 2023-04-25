@@ -102,7 +102,7 @@ TEMPLATES = [
 ```
 
 2. Create base template with header / footer
-```html
+```stuff
 <!-- Tailwind CSS stuff -->
 {% load compress %}
 {% load static %}
