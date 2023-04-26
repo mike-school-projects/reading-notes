@@ -145,6 +145,7 @@ TEMPLATES = [
 {% endcomment %}
 
 3. Create html file, using base template
+{% comment %}
 ```pseudo
 <!-- import in base template -->
 {% extends 'base.html' %}
@@ -157,7 +158,7 @@ TEMPLATES = [
 
     {% endfor %}
 {% endblock content %}
-
+{% endcomment %}
 
 
 ```
