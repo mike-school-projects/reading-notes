@@ -105,6 +105,7 @@ TEMPLATES = [
 
 2. Create base template with header / footer
 
+{% comment %}
 ```pseudo
 <!-- Tailwind CSS stuff -->
 <!-- IMPORT COMPRESSOR STUFF HERE -->
@@ -141,6 +142,7 @@ TEMPLATES = [
 </body>
 
 ```
+{% endcomment %}
 
 3. Create html file, using base template
 ```pseudo
