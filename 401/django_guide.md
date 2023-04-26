@@ -104,10 +104,11 @@ TEMPLATES = [
 ```
 
 2. Create base template with header / footer
+
 ```pseudo
 <!-- Tailwind CSS stuff -->
-{% load compress %}
-{% load static %}
+<!-- IMPORT COMPRESSOR STUFF HERE -->
+
 
 <!DOCTYPE html>
 <html lang="en" class = 'dark'>
