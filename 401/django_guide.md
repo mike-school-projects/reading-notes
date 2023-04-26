@@ -107,9 +107,8 @@ TEMPLATES = [
 
 {% comment %}
 ```pseudo
-<!-- Tailwind CSS stuff -->
-<!-- IMPORT COMPRESSOR STUFF HERE -->
-
+{% load compress %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en" class = 'dark'>
@@ -120,8 +119,10 @@ TEMPLATES = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike's first django site</title>
 
-<!-- Tailwind CSS stuff -->
-<!-- IMPORT COMPRESSOR STUFF HERE -->
+    <!-- Tailwind CSS stuff -->
+    {% compress css %}
+      <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
 </head>
 
 <header>
