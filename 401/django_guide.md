@@ -120,9 +120,7 @@ TEMPLATES = [
     <title>Mike's first django site</title>
 
 <!-- Tailwind CSS stuff -->
-    {% compress css %}
-      <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
+<!-- IMPORT COMPRESSOR STUFF HERE -->
 </head>
 
 <header>
