@@ -4,8 +4,6 @@
 
 Purpose is to take in an input and mix up the storage of it, most likely for security purposes.
 
-![Hash Table image](https://en.wikipedia.org/wiki/Hash_table#/media/File:Hash_table_3_1_1_0_1_0_0_SP.svg)
-
 Key components to a hash table:
 1. Value: this is the output data
 2. Hash function: determines where to put the data
