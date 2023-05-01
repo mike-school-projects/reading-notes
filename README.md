@@ -57,6 +57,7 @@ This website is to organize my class reading notes.
 
 ## Cheatsheets
 
-[Cheatsheets](https://mikeshen7.github.io/cheatsheet/)
+- [Django Guide](https://mikeshen7.github.io/reading-notes/401/djnango_guide.md)
+- [Cheatsheets](https://mikeshen7.github.io/cheatsheet/)
 
 - [Link to my portfolio](https://github.com/mikeshen7)
