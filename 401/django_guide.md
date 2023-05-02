@@ -5,26 +5,37 @@
 1. Create repo and clone
 2. Create virtual environment
 3. Start virtual environment
+4. Add gitignore, README.md
 4. Install django: pip install django
 5. Create Django project (must include . at end): django-admin startproject project_name .
-6. Update Django: python manage.py migrate
-7. Start server: python manage.py runserver
-8. Add gitignore
+6. If using default user database:
+- Update Django: python manage.py migrate
+- Create superuser named 'admin': python manage.py createsuperuser
+7. If using custom user database, go to that section.
+8. Start server and check install: python manage.py runserver
 
 
 
 ## Install Django Environment
 1. pip install django-environ
-2. Add to settings
+
+2. Add .env file to PROJECT, not root folder.  Add .env.sample
+
+```pseudo
+DEBUG=True
+SECRET_KEY=django-insecure-*g*-qc2)=%9(vy*!=6x46vwjvef!qzlgicp3pg)=h+-=ssr-)0 REPLACE THIS WITH YOUR KEY, no quotes
+```
+
+3. Add to settings.py
 ```pseudo
 
 import environ
 from pathlib import Path
 
+# ENV setup
 env = environ.Env(
     DEBUG=(bool, False),
 )
-
 environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -34,12 +45,8 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env.bool('DEBUG')
 
 ```
-3. Add .env to PROJECT, not root folder
 
-```pseudo
-DEBUG=True
-SECRET_KEY=django-insecure-*g*-qc2)=%9(vy*!=6x46vwjvef!qzlgicp3pg)=h+-=ssr-)0
-```
+
 4. Start server and test webpage to ensure .env is loaded.  python manage.py runserver
 
 
@@ -113,17 +120,18 @@ module.exports = {
 
 
 ## Custom Users
-Create app called accounts
-
-Update settings.py
-- Add accounts to INSTALLED_APPS
-- Add accounts.CustomUser to AUTH_USER_MODEL
+1. Create app called accounts: python manage.py startapp accounts
+2. Update settings.py
 ```pseudo
+INSTALLED_APPS = [
+    'accounts'
+]
+
 # Custom User Model
 AUTH_USER_MODEL = "accounts.CustomUser"
 ```
 
-Update accounts/models.py with new CustomUser class
+3. Update accounts/models.py with new CustomUser class
 ```pseudo
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -137,7 +145,7 @@ class CustomUser(AbstractUser):
 
 ```
 
-Add new form
+4. Create accounts/forms.py
 ```pseudo
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
@@ -155,8 +163,7 @@ class CustomUserChangeForm(UserChangeForm):
 
 ```
 
-
-Update admin.py
+5. Update accounts/admin.py
 
 ```pseudo
 from django.contrib import admin
@@ -175,6 +182,16 @@ class CustomUserAdmin(UserAdmin):
 admin.site.register(CustomUser, CustomUserAdmin)
 ```
 
+6. python manage.py makemigrations
+
+7. python manage.py migrate
+
+[Migrations exception](https://stackoverflow.com/questions/44651760/django-db-migrations-exceptions-inconsistentmigrationhistory)
+
+8. Create superuser named 'admin': python manage.py createsuperuser
+
+9. Test accounts.  Run server, go to admin, login as admin.
+
 
 
 ## Create App
@@ -183,32 +200,51 @@ admin.site.register(CustomUser, CustomUserAdmin)
 2. Add app to project in settings.py.
 ```pseudo
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'app_name',]
+    'app_name',
+]
 ```
 
 
 
 ## Create models
 1. in APP/models.py, create class models
-2. Check model structure: python manage.py makemigrations
-3. Make the table in database: python manage.py migrate
-3. Create superuser named 'admin': python manage.py createsuperuser
-4. Register model with admin.py
-```pseudo
+``` pseudo
+from django.db import models
+from django.contrib.auth import get_user_model
+from django.urls import reverse
 
-from django.contrib import admin
-from .models import Snack
+class Prospect(models.Model):
+    name = models.CharField(max_length=64)
+    school = models.CharField(max_length=64)
+    position = models.CharField(max_length=64)
+    report = models.URLField()
+    scout = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
-admin.site.register(Snack)
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('prospect_detail', args=[str(self.id)])
 
 
 ```
+
+2. Register model with APP/admin.py
+```pseudo
+
+from django.contrib import admin
+from .models import Prospect
+
+admin.site.register(Prospect)
+
+```
+
+3. Check model structure: python manage.py makemigrations
+4. Make the table in database: python manage.py migrate
+5. Test database by adding something
+
+
+
 
 
 
@@ -368,4 +404,52 @@ urlpatterns = [
 
 
 
+
+
+
+## Django Rest Framework
+1. pip install djangorestframework
+2. Add it to settings.py
+```pseudo
+INSTALLED_APPS = [
+    'rest_framework',
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permission.AllowAny',
+    ]
+}
+
+```
+3. PROJECT urls.py, 
+
+
+## Docker
+1. touch docker-compose.yml
+```pseudo
+version: '3'
+
+services:
+    web:
+        build: .
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - "8000:8000:
+# NOTE: May need to change 0.0.0.0 to localhost
+```
+
+2. touch Dockerfile
+```psuedo
+
+
+```
+3. docker compose up
+4. Add IP to settings.py
+```pseudo
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+# NOTE: May need to change 0.0.0.0 to localhost
+```
 
