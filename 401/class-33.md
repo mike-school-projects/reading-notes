@@ -22,7 +22,7 @@ There are 3 major parts:
 
 runserver has not gone through security audits or performance tests
 
-Nginx is a alternative.
+Nginx is an alternative.
 
 ## Things I want to know more about
 

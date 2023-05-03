@@ -431,25 +431,81 @@ REST_FRAMEWORK = {
 version: '3'
 
 services:
-    web:
-        build: .
-        command: python manage.py runserver 0.0.0.0:8000
-        volumes:
-            - .:/code
-        ports:
-            - "8000:8000:
-# NOTE: May need to change 0.0.0.0 to localhost
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
 ```
 
 2. touch Dockerfile
 ```psuedo
-
+FROM python:3
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+COPY requirements.txt /code/
+RUN pip install -r requirements.txt
+COPY . /code/
 
 ```
 3. docker compose up
 4. Add IP to settings.py
 ```pseudo
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
-# NOTE: May need to change 0.0.0.0 to localhost
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1']
+
 ```
 
+5. Build docker container: docker compose up --build
+
+6. Run server: docker compose up
+
+7. For windows, browse to localhost:8000, not 0.0.0.0:8000 
+
+
+## Postgres
+1. pip install pyscopg2-binary
+2. pip freeze > requirements.txt
+3. Modify docker-compose.yml to point to postgres database
+```pseudo
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+```
+
+4. Modify settings.py
+```pseudo
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': '5432',
+    }
+}
+
+```
+
+5. Setup database with Docker running:
+- With docker running, open new terminal
+- docker compose run web python manage.py migrate
+- docker compose run web python manage.py createsuperuser
