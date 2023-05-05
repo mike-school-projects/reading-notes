@@ -18,7 +18,6 @@ This website is to organize my class reading notes.
 - [Code 401 Class 07 notes](https://mikeshen7.github.io/reading-notes/401/class-07)
 - [Code 401 Class 08 notes](https://mikeshen7.github.io/reading-notes/401/class-08)
 - [Code 401 Class 09 notes](https://mikeshen7.github.io/reading-notes/401/class-09)
-- [Code 401 Class 10 notes](https://mikeshen7.github.io/reading-notes/401/class-10)
 - [Code 401 Class 11 notes](https://mikeshen7.github.io/reading-notes/401/class-11)
 - [Code 401 Class 12 notes](https://mikeshen7.github.io/reading-notes/401/class-12)
 - [Code 401 Class 13 notes](https://mikeshen7.github.io/reading-notes/401/class-13)
