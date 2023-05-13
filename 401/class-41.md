@@ -1,5 +1,3 @@
-[class-31.md](class-31.md)
-
 # Class Notes
 
 This is an important topic because deploying a project is a pretty important thing if you want anyone to see or use your website.
