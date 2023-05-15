@@ -44,6 +44,7 @@ This website is to organize my class reading notes.
 - [Code 401 Class 40 notes](https://mikeshen7.github.io/reading-notes/401/class-40)
 - [Code 401 Class 41 notes](https://mikeshen7.github.io/reading-notes/401/class-41)
 - [Code 401 Class 42 notes](https://mikeshen7.github.io/reading-notes/401/class-42)
+- [Code 401 Class 42 Ethics notes](https://mikeshen7.github.io/reading-notes/401/class-42-Ethics)
 - [Code 401 Class 43 notes](https://mikeshen7.github.io/reading-notes/401/class-43)
 - [Code 401 Class 44 notes](https://mikeshen7.github.io/reading-notes/401/class-44)
 - [Code 401 Class 45 notes](https://mikeshen7.github.io/reading-notes/401/class-45)
