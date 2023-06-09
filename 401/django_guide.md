@@ -22,6 +22,7 @@ npm install flowbite
 
 6. pip freeze > requirements.txt
 
+
 ## Create Project
 1. Create Django project (must include . at end): django-admin startproject project_name . 
 2. Start server and check install: python manage.py runserver (ignore migration message)
@@ -35,7 +36,7 @@ npm install flowbite
 ```pseudo
 DEBUG=True
 SECRET_KEY=django-insecure-*g*-qc2)=%9(vy*!=6x46vwjvef!qzlgicp3pg)=h+-=ssr-)0 REPLACE THIS WITH YOUR KEY, no quotes
-ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
+ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0,.vercel.app
 ```
 
 3. Add to settings.py
@@ -61,6 +62,7 @@ ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS'))
 
 
 4. Start server and test webpage to ensure .env is loaded.  python manage.py runserver
+
 
 
 ## Docker
@@ -98,19 +100,58 @@ COPY . /code/
 
 
 
-## Django Default Users
+## gunicorn / whitenoise
+1. pip install gunicorn 
+2. pip install whitenoise 
+3. Add to settings.py
+```pseudo
+INSTALLED_APPS = [
+    # 3rd party
+    'whitenoise',
+]
+
+MIDDLEWARE = [
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # Add to top of list above everything else, but below django.middleware.security.SecurityMiddleWare if using
+]
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
+
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+```
+3. pip freeze > requirements.txt 
+4. Modify docker-compose.yml
+```pseudo
+services:
+  web:
+    build: .
+    command: gunicorn project.wsgi:application --bind 0.0.0.0:8000 --workers 4
+    # modify for project name
+
+```
+5. docker compose run web python manage.py collectstatic
+
+6. docker compose up --build
+
+
+
+## Default Users Database
 Do this OR Customer Users
 - Update Django: python manage.py migrate
 - Create superuser named 'admin': python manage.py createsuperuser
 
 
 
-## Custom Users
+## Custom Users Database
 1. Create app called accounts: python manage.py startapp accounts
 2. Update settings.py
 ```pseudo
 INSTALLED_APPS = [
-    'accounts'
+    'accounts',
 ]
 
 # Custom User Model
@@ -261,7 +302,7 @@ version: '3'
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn project.wsgi:application --bind 0.0.0.0:8000 --workers 4
     volumes:
       - .:/code
     ports:
@@ -283,9 +324,7 @@ DATABASES = {
 
 4. Modify project/.env file
 ```pseudo
-DEBUG=True
-SECRET_KEY=django-insecure-duoyik9g4$v&b%pwmz%*+u9bg2s(z@rl*8+hnd_i*e6zpko0rq
-ALLOWED_HOSTS=localhost,127.0.0.1,0.0.0.0
+# Postgres SQL Database
 DATABASE_NAME=kodbcmjq
 DATABASE_USER=kodbcmjq
 DATABASE_PASSWORD=t3mTB0Rl32NWXPAfbRWEPb5Absd9UFar
@@ -297,45 +336,6 @@ DATABASE_PORT=5432
 6. With docker running, open new terminal
 7. docker compose run web python manage.py migrate
 8. docker compose run web python manage.py createsuperuser
-
-
-
-## gunicorn / whitenoise
-1. pip install gunicorn 
-2. pip install whitenoise 
-3. Add to settings.py
-```pseudo
-INSTALLED_APPS = [
-    # 3rd party
-    'whitenoise',
-]
-
-MIDDLEWARE = [
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    # Add to top of list above everything else, but below django.middleware.security.SecurityMiddleWare if using
-]
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
-
-```
-3. pip freeze > requirements.txt 
-4. Modify docker-compose.yml
-```pseudo
-services:
-  web:
-    build: .
-    command: gunicorn project.wsgi:application --bind 0.0.0.0:8000 --workers 4
-    # modify for project name
-
-```
-5. docker compose run web python manage.py collectstatic
-
-6. docker compose up --build
 
 
 
@@ -389,6 +389,20 @@ admin.site.register(Prospect)
 5. Test database by adding something
 
 
+## Create Serializer
+```pseudo code
+from rest_framework import serializers
+from .models import Skill
+
+class SkillSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Skill
+        fields = "__all__"
+
+    def limit_queryset(self, queryset):
+        return queryset[:100]
+```
+
 
 ## Create VIEWS
 1. Create class definitions that point to html files
@@ -421,12 +435,35 @@ class AboutPageView(TemplateView):
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
+from rest_framework_simplejwt import views as jwt_views
+from .views import MyTokenObtainPairView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('cookie_stands.urls')),
-    path('', lambda req: redirect('api/v1/app/')),
-]
+
+    # Redirect URL
+    path('', lambda req: redirect('api/v1/job_data/')),
+
+    # Login Endpoint
+    path('api-auth', include("rest_framework.urls")),
+
+    # Users Endpoint
+    path('api/v1/users/', include('user_profile.urls')),
+
+    # Job Data Endpoint
+    path('api/v1/job_data/', include('job_data.urls')),
+
+    # Skills Endpoint
+    path('api/v1/skills/', include('skills.urls')),
+
+    # Cost of Living Endpoint
+    path('api/v1/col/', include('col.urls')),
+
+    # JWT URLS
+    path('api/token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 ```
 
@@ -440,7 +477,6 @@ urlpatterns = [
     path('<int:pk>', RosterDetail.as_view(), name='roster_detail'),
 ]
 ```
-
 
 
 
